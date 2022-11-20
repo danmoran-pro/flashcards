@@ -1,7 +1,6 @@
 require './lib/card'
 require './lib/deck'
 
-
 RSpec.describe Deck do 
 
   it "can create a deck" do
