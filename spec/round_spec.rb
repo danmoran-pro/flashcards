@@ -1,5 +1,5 @@
 require './lib/card.rb'
-require './lib/turn'
+require './lib/turn.rb'
 require './lib/deck.rb'
 require './lib/round.rb'
 
@@ -16,7 +16,7 @@ RSpec.describe Round do
 
     expect(round).to be_instance_of(Round)
     expect(round.deck).to eq(@deck)
-    expect(round.turn).to eq([])
+    expect(round.turns).to eq([])
 
     expect(round.current_card).to eq(@card_1)
     
