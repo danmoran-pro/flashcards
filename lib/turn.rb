@@ -5,7 +5,15 @@ class Turn
     @guess = guess
   end
 
-    def correct?
-      @card.answer == @guess
+  def correct?
+    @card.answer == @guess
+  end
+  
+  def feedback
+    if correct?
+      "Correct"
+    else 
+      "Incorrect."
     end
+  end
   end
