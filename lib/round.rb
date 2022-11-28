@@ -38,4 +38,24 @@ class Round
   def percent_correct_by_category(cate)
     number_correct_by_category(cate)*100
   end
+
+  def start
+    puts ""
+    
+    puts "Welcome! You're playing with #{@deck.count} cards."
+    puts "-" * 50
+    
+    # require 'pry'; binding.pry
+    @deck.cards.each_with_index do |card, index|
+      card_number = index + 1
+      puts "This is card number #{card_number} out of 4."
+      puts "Question: #{card.question}"
+      guess = gets.chomp
+      take_turn(guess)
+      puts turns.last.feedback
+      card_number += 1
+    end
+
+  end
+
 end
